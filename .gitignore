@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Node modules
+node_modules/
+
+# Dist or packaged builds
+dist/
+*.zip
+*.crx
