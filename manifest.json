@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Multi-AI Chat Sidebar",
+  "version": "3.1.0",
+  "description": "Access ChatGPT, Gemini, and DeepSeek in one convenient sidebar",
+  "author": "Shubhranshu",
+  "permissions": [
+    "sidePanel",
+    "declarativeNetRequest",
+    "storage",
+    "cookies"
+  ],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://chat.openai.com/*",
+    "https://gemini.google.com/*",
+    "https://deepseek.com/*",
+    "https://chat.deepseek.com/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "remove_headers",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Open Multi-AI Chat Sidebar"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "minimum_chrome_version": "114"
+}
